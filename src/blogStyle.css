@@ -1,0 +1,23 @@
+h1 {text-align: center;
+color: #000;
+}
+section{float: left;
+width: 30%;
+height: 30%;
+border: 5px dashed blue;
+padding: 1em;
+background: red !important;
+}
+p::first-letter { 
+    font-size: 200%;
+    color: #8A2BE2;
+  }
+footer{
+    clear: left;
+}
+.column1 {background:green;
+}
+.column2 {background:yellow;
+    overflow: auto;}
+.column3 {background:blue;
+}
