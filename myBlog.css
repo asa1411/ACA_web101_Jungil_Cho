@@ -1,6 +1,11 @@
 html {
   display: block;
 }
+h1 {
+  background: yellowgreen;
+  width: 80%;
+  height: 5%;
+}
 h3 {
   color: black;
 }
