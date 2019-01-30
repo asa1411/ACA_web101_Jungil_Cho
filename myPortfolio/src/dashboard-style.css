@@ -1,0 +1,48 @@
+.main {
+  display: grid;
+  grid-template-columns: [col1] 33% [col2] 33% [col3] 33%;
+  grid-gap: 10px;
+  grid-template-rows: [row1] 24% [row2] 24% [row3] 24% [row4] 24%;
+  text-align: center;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+
+.calendar {
+  background-color: yellowgreen;
+  padding: 25px;
+  border-radius: 6px;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.calculator {
+  background-color: burlywood;
+  padding: 25px;
+  border-radius: 6px;
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.greeting {
+  background-color: gray;
+  padding: 25px;
+  border-radius: 6px;
+  grid-column: 2;
+  grid-row: 2;
+}
+.clock {
+  background-color: #921111;
+  grid-column: 2;
+  grid-row: 3;
+  padding: 25px;
+  border-radius: 6px;
+}
+.to-do-list {
+  background-color: #658db5;
+  padding: 25px;
+  border-radius: 6px;
+  grid-column: 2;
+  grid-row: 4;
+}
