@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  background-image: url("./images/galaxy");
+}
+div {
+  flex-flow: row wrap;
+}
+.item-1 {
+  width: 400px;
+  height: 300px;
+}
+.item-2 {
+  width: 400px;
+  height: 300px;
+}
+.item-3 {
+  width: 400px;
+  height: 300px;
+}
+.item-4 {
+  width: 400px;
+  height: 300px;
+}
