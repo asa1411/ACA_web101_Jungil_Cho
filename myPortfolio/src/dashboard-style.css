@@ -1,62 +1,91 @@
-body {
-  background-image: url("./myProfilePic.jpg");
-}
+.calendar {grid-area: calendar;}
+.calculator {grid-area: calculator;}
 .grid-container {
   display: grid;
-  grid-template-columns: [col1] 33% [col2] 33% [col3] 33%;
-  grid-gap: 10px;
-  grid-template-rows: auto auto auto auto;
-  text-align: center;
-  color: #fff;
+  grid-template-areas: 'calendar calendar calendar calculator'
+  'calendar calendar calendar calculator';
+  background-color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
 }
 
 .calendar {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+  grid-template-rows:  100px 100px 100px 100px 100px 100px;
+  grid-template-areas:   'month-year month-year month-year month-year month-year month-year month-year'
+  'sun mon tues wed thurs fri sat'
+  'day1 day2 day3 day4 day5 day6 day7'
+  'day8 day9 day10 day11 day12 day13 day14';
+  text-align: center;
   background-color: yellowgreen;
   padding: 25px;
-  border-radius: 6px;
-  grid-column: 1;
-  grid-row: 1;
-  height: 200px;
-}
-.calculator{grid-column: 3;
-  grid-row: 1;}
+  }
+  .month-year {grid-area: month-year}
+  .sun {grid-area: sun ;}
+  .mon {grid-area: mon ;}
+  .tues {grid-area: tues ;}
+  .wed {grid-area: wed ;}
+  .thurs {grid-area: thurs;}
+  .fri {grid-area: fri ;}
+  .sat {grid-area: sat ;}
+
+  .day1 {grid-area: day1 ;}
+  .day2 {grid-area: day2;}
+  .day3 {grid-area: day3;}
+  .day4 {grid-area: day4;}
+  .day5 {grid-area: day5;}
+  .day6 {grid-area: day6;}
+  .day7 {grid-area: day7;}
+  .day8 {grid-area: day8 ;}
+  .day9 {grid-area: day9;}
+  .day10 {grid-area: day10;}
+  .day11 {grid-area: day11;}
+  .day12 {grid-area: day12;}
+  .day13 {grid-area: day13;}
+  .day14 {grid-area: day14;}
+
+
 .calculator {
   display: grid;
-  grid-template-columns: [col1] 33% [col2] 33% [col3] 33%;
+  grid-template-columns:100px 100px 100px 100px;
   grid-gap: 10px;
-  grid-template-rows: auto auto auto ;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
+  justify-content: center;
+  grid-template-rows: 50px 50px 50px 50px 50px 50px;
+  grid-template-areas:  'clear answer answer answer'
+  'number7 number8 number9 division'
+  'number4 number5 number6 product'
+  'number1 number2 number3 minus'
+  'number0 decimal plus equals';
+
+  
   background-color: #2196F3;
   padding: 10px;
 }
+
+.answer {grid-area: answer;
+background-color: black !important;
+color: white;}
+.number1 {grid-area: number1;}
+.number2 {grid-area: number2;}
+.number3 {grid-area: number3;}
+.number4 {grid-area: number4;}
+.number5 {grid-area: number5;}
+.number6 {grid-area: number6;}
+.number7 {grid-area: number7;}
+.number8 {grid-area: number8;}
+.number9 {grid-area: number9;}
+.number0 {grid-area: number0;}
+.plus {grid-area: plus;}
+.minus {grid-area: minus;}
+.decimal {grid-area: decimal;}
+.product {grid-area: product;}
+.division {grid-area: division;}
+.equals {grid-area: equals;}
+.clear {grid-area: clear;}
+
 .calculator > div {
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
-.greeting {
-  background-color: gray;
-  padding: 25px;
-  border-radius: 6px;
-  grid-column: 2;
-  grid-row: 2;
-  height: 200px;
-}
-.clock {
-  background-color: #921111;
-  grid-column: 2;
-  grid-row: 3;
-  padding: 25px;
-  border-radius: 6px;
-}
-.to-do-list {
-  background-color: #658db5;
-  padding: 25px;
-  border-radius: 6px;
-  grid-column: 2;
-  grid-row: 4;
-}
