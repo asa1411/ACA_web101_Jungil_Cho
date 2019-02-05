@@ -1,9 +1,21 @@
-.calendar {grid-area: calendar;}
-.calculator {grid-area: calculator;}
+.calendar {
+  grid-area: calendar;
+}
+.calculator {
+  grid-area: calculator;
+}
+.greetings {
+  grid-area: greetings;
+}
+.clock {
+  grid-area: clock;
+}
 .grid-container {
   display: grid;
-  grid-template-areas: 'calendar calendar calendar calculator'
-  'calendar calendar calendar calculator';
+  grid-template-areas:
+    "calendar  calculator"
+    "greetings  clock";
+
   background-color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
@@ -12,80 +24,205 @@
 .calendar {
   display: grid;
   grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
-  grid-template-rows:  100px 100px 100px 100px 100px 100px;
-  grid-template-areas:   'month-year month-year month-year month-year month-year month-year month-year'
-  'sun mon tues wed thurs fri sat'
-  'day1 day2 day3 day4 day5 day6 day7'
-  'day8 day9 day10 day11 day12 day13 day14';
+  grid-template-rows: 50px 50px 50px 50px 50px 50px;
+  grid-template-areas:
+    "month-year month-year month-year month-year month-year month-year month-year"
+    "sun mon tues wed thurs fri sat"
+    "day1 day2 day3 day4 day5 day6 day7"
+    "day8 day9 day10 day11 day12 day13 day14";
   text-align: center;
   background-color: yellowgreen;
   padding: 25px;
-  }
-  .month-year {grid-area: month-year}
-  .sun {grid-area: sun ;}
-  .mon {grid-area: mon ;}
-  .tues {grid-area: tues ;}
-  .wed {grid-area: wed ;}
-  .thurs {grid-area: thurs;}
-  .fri {grid-area: fri ;}
-  .sat {grid-area: sat ;}
+}
+.tues {
+  grid-area: tues;
+}
+.wed {
+  grid-area: wed;
+}
+.thurs {
+  grid-area: thurs;
+}
+.month-year {
+  grid-area: month-year;
+}
+.sun {
+  grid-area: sun;
+}
+.mon {
+  grid-area: mon;
+}
+.fri {
+  grid-area: fri;
+}
+.sat {
+  grid-area: sat;
+}
 
-  .day1 {grid-area: day1 ;}
-  .day2 {grid-area: day2;}
-  .day3 {grid-area: day3;}
-  .day4 {grid-area: day4;}
-  .day5 {grid-area: day5;}
-  .day6 {grid-area: day6;}
-  .day7 {grid-area: day7;}
-  .day8 {grid-area: day8 ;}
-  .day9 {grid-area: day9;}
-  .day10 {grid-area: day10;}
-  .day11 {grid-area: day11;}
-  .day12 {grid-area: day12;}
-  .day13 {grid-area: day13;}
-  .day14 {grid-area: day14;}
-
+.day1 {
+  grid-area: day1;
+}
+.day2 {
+  grid-area: day2;
+}
+.day3 {
+  grid-area: day3;
+}
+.day4 {
+  grid-area: day4;
+}
+.day5 {
+  grid-area: day5;
+}
+.day6 {
+  grid-area: day6;
+}
+.day7 {
+  grid-area: day7;
+}
+.day8 {
+  grid-area: day8;
+}
+.day9 {
+  grid-area: day9;
+}
+.day10 {
+  grid-area: day10;
+}
+.day11 {
+  grid-area: day11;
+}
+.day12 {
+  grid-area: day12;
+}
+.day13 {
+  grid-area: day13;
+}
+.day14 {
+  grid-area: day14;
+}
 
 .calculator {
   display: grid;
-  grid-template-columns:100px 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px 100px;
   grid-gap: 10px;
   justify-content: center;
   grid-template-rows: 50px 50px 50px 50px 50px 50px;
-  grid-template-areas:  'clear answer answer answer'
-  'number7 number8 number9 division'
-  'number4 number5 number6 product'
-  'number1 number2 number3 minus'
-  'number0 decimal plus equals';
+  grid-template-areas:
+    "clear answer answer answer"
+    "number7 number8 number9 division"
+    "number4 number5 number6 product"
+    "number1 number2 number3 minus"
+    "number0 decimal plus equals";
 
-  
-  background-color: #2196F3;
+  background-color: #2196f3;
   padding: 10px;
 }
 
-.answer {grid-area: answer;
-background-color: black !important;
-color: white;}
-.number1 {grid-area: number1;}
-.number2 {grid-area: number2;}
-.number3 {grid-area: number3;}
-.number4 {grid-area: number4;}
-.number5 {grid-area: number5;}
-.number6 {grid-area: number6;}
-.number7 {grid-area: number7;}
-.number8 {grid-area: number8;}
-.number9 {grid-area: number9;}
-.number0 {grid-area: number0;}
-.plus {grid-area: plus;}
-.minus {grid-area: minus;}
-.decimal {grid-area: decimal;}
-.product {grid-area: product;}
-.division {grid-area: division;}
-.equals {grid-area: equals;}
-.clear {grid-area: clear;}
+.answer {
+  grid-area: answer;
+  background-color: black !important;
+  color: white;
+}
+.number1 {
+  grid-area: number1;
+}
+.number2 {
+  grid-area: number2;
+}
+.number3 {
+  grid-area: number3;
+}
+.number4 {
+  grid-area: number4;
+}
+.number5 {
+  grid-area: number5;
+}
+.number6 {
+  grid-area: number6;
+}
+.number7 {
+  grid-area: number7;
+}
+.number8 {
+  grid-area: number8;
+}
+.number9 {
+  grid-area: number9;
+}
+.number0 {
+  grid-area: number0;
+}
+.plus {
+  grid-area: plus;
+}
+.minus {
+  grid-area: minus;
+}
+.decimal {
+  grid-area: decimal;
+}
+.product {
+  grid-area: product;
+}
+.division {
+  grid-area: division;
+}
+.equals {
+  grid-area: equals;
+}
+.clear {
+  grid-area: clear;
+}
 
 .calculator > div {
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
+}
+.greetings {
+  width: 500px;
+  height: 300px;
+  background-color: skyblue;
+}
+.clock {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 100px;
+  grid-template-areas: "hour  colon minute  am-pm";
+  max-width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40%;
+  font-size: 40px;
+  background-color: yellowgreen;
+}
+.hour {
+  grid-area: hour;
+}
+.minute {
+  grid-area: minute;
+}
+.colon {
+  grid-area: colon;
+}
+.am-pm {
+  grid-area: am-pm;
+}
+
+header {
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+footer {
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
