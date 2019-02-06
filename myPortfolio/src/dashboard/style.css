@@ -1,3 +1,11 @@
+header {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
+}
 .calendar {
   grid-area: calendar;
 }
@@ -10,13 +18,15 @@
 .clock {
   grid-area: clock;
 }
+
 .grid-container {
   display: grid;
   grid-template-areas:
-    "calendar  calculator"
+    "calendar   calculator"
     "greetings  clock";
 
-  background-color: #fff;
+  background-image: url("patrick-tomasso-208114-unsplash.jpg");
+  background-repeat: no-repeat;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
 }
@@ -33,6 +43,7 @@
   text-align: center;
   background-color: yellowgreen;
   padding: 25px;
+  /* float: left; */
 }
 .tues {
   grid-area: tues;
@@ -107,7 +118,7 @@
   grid-template-columns: 100px 100px 100px 100px;
   grid-gap: 10px;
   justify-content: center;
-  grid-template-rows: 50px 50px 50px 50px 50px 50px;
+  /* grid-template-rows: 50px 50px 50px 50px 50px 50px; */
   grid-template-areas:
     "clear answer answer answer"
     "number7 number8 number9 division"
@@ -187,17 +198,24 @@
   height: 300px;
   background-color: skyblue;
 }
+.greetings > div {
+  padding: 30px;
+}
 .clock {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-template-rows: 100px;
-  grid-template-areas: "hour  colon minute  am-pm";
-  max-width: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40%;
-  font-size: 40px;
-  background-color: yellowgreen;
+  /* grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px 100px; */
+  grid-template-areas:
+    /* "hour  colon minute  am-pm"
+    "hour  colon minute  am-pm"
+    "hour  colon minute  am-pm" */ "hour hour hour colon minute minute minute am-pm";
+
+  /* margin: 40%; */
+
+  /* background-color: yellowgreen; */
+  font-size: 200px;
+  padding: 20px;
+  text-align: center;
 }
 .hour {
   grid-area: hour;
@@ -211,18 +229,47 @@
 .am-pm {
   grid-area: am-pm;
 }
-
-header {
-  width: 100%;
-  height: 40px;
-  background-color: black;
-  color: white;
-  padding: 10px;
+.toDoList {
+  display: grid;
+  grid-template-areas:
+    "todolist"
+    "plan"
+    "workout"
+    "meeting";
+  width: 288px;
+  height: 299px;
+  margin-left: 550px;
 }
+.box-title {
+  grid-area: todolist;
+  height: 50px;
+  background-color: beige;
+  margin-top: 50px;
+}
+.box-plan {
+  grid-area: plan;
+  background-color: darkorange;
+  height: 50px;
+}
+.box-workout {
+  grid-area: workout;
+  background-color: burlywood;
+  height: 50px;
+}
+.box-meeting {
+  grid-area: meeting;
+  background-color: rgb(86, 197, 35);
+  height: 50px;
+}
+
 footer {
   width: 100%;
   height: 40px;
   background-color: black;
   color: white;
   padding: 10px;
+}
+a {
+  float: right;
+  padding-right: 100px;
 }
