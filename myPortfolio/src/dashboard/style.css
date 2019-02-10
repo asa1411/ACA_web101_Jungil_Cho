@@ -50,7 +50,7 @@ header {
 
 .calendar {
   display: grid;
-  grid-template-columns: 90px 90px 90px 90px 90px 90px 90px;
+  grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
   grid-template-rows: 50px 50px 50px 50px 50px 50px;
   grid-template-areas:
     "month-year month-year month-year month-year month-year month-year month-year"
@@ -132,10 +132,10 @@ header {
 
 .calculator {
   display: grid;
-  grid-template-columns: 70px 70px 70px 70px;
+  grid-template-columns: 23% 23% 23% 23%;
   grid-gap: 10px;
   justify-content: center;
-  /* grid-template-rows: 50px 50px 50px 50px 50px 50px; */
+  grid-template-rows: 18% 18% 18% 18% 18%;
   grid-template-areas:
     "clear answer answer answer"
     "number7 number8 number9 division"
@@ -212,8 +212,6 @@ header {
   font-size: 30px;
 }
 .greetings {
-  /* width: 500px;
-  height: 300px; */
   background-color: rgb(187, 119, 119);
   border-top: 1px solid gray;
 }
@@ -223,9 +221,8 @@ header {
 }
 .clock {
   display: grid;
-  /* grid-template-columns: 100px 100px 100px 100px;
-  grid-template-rows: 100px 100px 100px 100px; */
   grid-template-areas: "hour hour hour colon minute minute minute am-pm";
+
   margin-top: 100px;
   font-size: 70px;
   padding: 10px;
@@ -246,7 +243,11 @@ header {
 }
 .toDoList {
   display: grid;
-  width: auto;
+
+  grid-template-columns: 95%;
+  grid-gap: 10px;
+
+  grid-template-rows: 20% 20% 20% 20%;
   grid-template-areas:
     "todolist"
     "plan"
@@ -255,25 +256,30 @@ header {
 }
 .box-title {
   grid-area: todolist;
-  height: 50px;
+
   background-color: beige;
-  margin-top: 50px;
-  text-align: center;
+
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 .box-plan {
   grid-area: plan;
   background-color: darkorange;
-  height: 50px;
+  display: flex;
+  align-items: center;
 }
 .box-workout {
   grid-area: workout;
   background-color: burlywood;
-  height: 50px;
+  display: flex;
+  align-items: center;
 }
 .box-meeting {
   grid-area: meeting;
   background-color: rgb(86, 197, 35);
-  height: 50px;
+  display: flex;
+  align-items: center;
 }
 
 footer {
@@ -281,7 +287,7 @@ footer {
   height: 40px;
   background-color: black;
   color: white;
-  padding: 10px;
+  padding-bottom: 10px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -290,152 +296,7 @@ footer {
   justify-content: center;
   font-size: 20px;
 }
-@media (max-width: 480px) {
-  html {
-    background: none;
-  }
-  .grid-container {
-    background-color: rgb(177, 119, 119);
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas:
-      "calendar"
-      "calculator"
-      "greetings"
-      "todolist"
-      "clock";
-
-    /* font-family: Arial, Helvetica, sans-serif;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto; */
-  }
-  header {
-    width: auto;
-  }
-  .calendar {
-    display: grid;
-    grid-template-columns: 57px 57px 57px 57px 57px 57px 57px;
-    grid-template-rows: auto auto auto auto auto auto;
-    grid-template-areas:
-      "month-year month-year month-year month-year month-year month-year month-year"
-      "sun mon tues wed thurs fri sat"
-      "day1 day2 day3 day4 day5 day6 day7"
-      "day8 day9 day10 day11 day12 day13 day14";
-    text-align: center;
-    padding: 10px;
-    border-bottom: 2px solid wheat;
-    font-size: 20px;
-    width: auto;
-  }
-  .tues {
-    grid-area: tues;
-    padding: 10px;
-  }
-  .wed {
-    grid-area: wed;
-    padding: 10px;
-  }
-
-  .thurs {
-    grid-area: thurs;
-    padding: 10px;
-  }
-  .month-year {
-    grid-area: month-year;
-    padding: 10px;
-  }
-  .sun {
-    grid-area: sun;
-    padding: 10px;
-  }
-  .mon {
-    grid-area: mon;
-    padding: 10px;
-  }
-  .fri {
-    grid-area: fri;
-    padding: 10px;
-  }
-  .sat {
-    grid-area: sat;
-    padding: 10px;
-  }
-
-  .day1 {
-    grid-area: day1;
-  }
-  .day2 {
-    grid-area: day2;
-  }
-  .day3 {
-    grid-area: day3;
-  }
-  .day4 {
-    grid-area: day4;
-  }
-  .day5 {
-    grid-area: day5;
-  }
-  .day6 {
-    grid-area: day6;
-  }
-  .day7 {
-    grid-area: day7;
-  }
-  .day8 {
-    grid-area: day8;
-  }
-  .day9 {
-    grid-area: day9;
-  }
-  .day10 {
-    grid-area: day10;
-  }
-  .day11 {
-    grid-area: day11;
-  }
-  .day12 {
-    grid-area: day12;
-  }
-  .day13 {
-    grid-area: day13;
-  }
-  .day14 {
-    grid-area: day14;
-  }
-  footer {
-    width: auto;
-  }
-  .clock {
-    display: grid;
-    /* grid-template-columns: 100px 100px 100px 100px;
-    grid-template-rows: 100px 100px 100px 100px; */
-    grid-template-areas: "hour colon minute am-pm";
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 70px;
-    text-align: center;
-    color: wheat;
-  }
-  .hour {
-    grid-area: hour;
-  }
-  .minute {
-    grid-area: minute;
-  }
-  .colon {
-    grid-area: colon;
-  }
-  .am-pm {
-    grid-area: am-pm;
-  }
-  .calculator {
-    border-bottom: 2px solid wheat;
-  }
-}
+/* Media for Tablet size */
 @media (min-width: 481px) and (max-width: 767px) {
   html {
     background: none;
@@ -449,11 +310,6 @@ footer {
       "calendar calendar"
       "greetings clock"
       "calculator todolist";
-
-    font-family: Arial, Helvetica, sans-serif;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
   }
   header {
     width: auto;
@@ -507,71 +363,16 @@ footer {
     padding: 10px;
   }
 
-  .day1 {
-    grid-area: day1;
-  }
-  .day2 {
-    grid-area: day2;
-  }
-  .day3 {
-    grid-area: day3;
-  }
-  .day4 {
-    grid-area: day4;
-  }
-  .day5 {
-    grid-area: day5;
-  }
-  .day6 {
-    grid-area: day6;
-  }
-  .day7 {
-    grid-area: day7;
-  }
-  .day8 {
-    grid-area: day8;
-  }
-  .day9 {
-    grid-area: day9;
-  }
-  .day10 {
-    grid-area: day10;
-  }
-  .day11 {
-    grid-area: day11;
-  }
-  .day12 {
-    grid-area: day12;
-  }
-  .day13 {
-    grid-area: day13;
-  }
-  .day14 {
-    grid-area: day14;
-  }
   footer {
     width: auto;
   }
   .clock {
     display: grid;
-    /* grid-template-columns: 100px 100px 100px 100px;
-  grid-template-rows: 100px 100px 100px 100px; */
     grid-template-areas: "hour colon minute am-pm";
     font-size: 70px;
     color: wheat;
   }
-  .hour {
-    grid-area: hour;
-  }
-  .minute {
-    grid-area: minute;
-  }
-  .colon {
-    grid-area: colon;
-  }
-  .am-pm {
-    grid-area: am-pm;
-  }
+
   .calculator {
     border-bottom: 2px solid wheat;
     border-top: 2px solid wheat;
@@ -581,15 +382,59 @@ footer {
     border-top: 2px solid wheat;
   }
   .box-title {
-    margin-right: 5px;
+    margin-right: 0px;
   }
   .box-plan {
-    margin-right: 5px;
+    margin-right: 0px;
   }
   .box-workout {
-    margin-right: 5px;
+    margin-right: 0px;
   }
   .box-meeting {
-    margin-right: 5px;
+    margin-right: 0px;
+  }
+}
+
+/* Coding for Smartphone */
+@media (max-width: 480px) {
+  html {
+    background: none;
+  }
+  .grid-container {
+    background-color: rgb(177, 119, 119);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+      "calendar"
+      "calculator"
+      "greetings"
+      "todolist"
+      "clock";
+  }
+  .calendar {
+    font-size: 15px;
+    width: auto;
+  }
+  header {
+    width: auto;
+  }
+  footer {
+    width: auto;
+  }
+
+  .clock {
+    display: grid;
+    grid-template-areas: "hour colon minute am-pm";
+    justify-content: center;
+    margin: 20px 0px;
+    font-size: 70px;
+    text-align: center;
+    color: wheat;
+  }
+
+  .calculator {
+    border-bottom: 2px solid wheat;
+    border-top: 2px solid wheat;
   }
 }
