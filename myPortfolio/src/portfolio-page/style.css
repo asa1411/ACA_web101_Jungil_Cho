@@ -1,0 +1,52 @@
+header {
+  max-width: 1000px;
+  background-color: #4286f4;
+
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+nav > h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  grid-template-rows: 400px 400px;
+  grid-template-areas:
+    "blog myvideo"
+    "iframe form";
+
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.blog {
+  grid-area: blog;
+  background-color: #42f49e;
+}
+.video {
+  grid-area: myvideo;
+  background-color: #2da86c;
+}
+.iframe {
+  grid-area: iframe;
+  background-color: #1b6641;
+}
+.form {
+  grid-area: form;
+  background-color: #0b2d1d;
+}
+footer {
+  max-width: 1000px;
+  background-color: hsl(59, 89%, 61%);
+  height: 100px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
