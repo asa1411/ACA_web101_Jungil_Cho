@@ -5,24 +5,100 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>portfolio-page</title>
     <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <nav>
         <h1>Jung's Portfolio</h1>
-        <a href="">home</a>
-        <a href="">iframe</a>
-        <a href="">videos</a>
-        <a href="">form</a>
+        <a href="https://asa1411.github.io/ACA_web101_Jungil_Cho/">home</a>
+        <a href="https://medium.com/@loosecreation">blog</a>
+        <a
+          href="https://asa1411.github.io/ACA_web101_Jungil_Cho/myPortfolio/src/dashboard/dashboard.html"
+          >dashboard</a
+        >
+        <a
+          href="https://asa1411.github.io/ACA_web101_Jungil_Cho/myPortfolio/src/nasa/nasa.html"
+          >NASA</a
+        >
       </nav>
     </header>
     <div class="container">
-      <div class="blog"></div>
-      <div class="iframe"></div>
-      <div class="video"></div>
-      <div class="form"></div>
+      <div class="blog">
+        <H2>BlogPost</H2>
+        <p>
+          <a href="https://medium.com/@loosecreation/blogpost-5-e545da26dfb4"
+            >Blog about media query
+          </a>
+        </p>
+        <p>
+          <a href="https://medium.com/@loosecreation/blogpost-6-1dd5bc164025"
+            >Blog about position
+          </a>
+        </p>
+        <p>
+          <a href="https://medium.com/@loosecreation/blogpost-7-d165124dc4a7"
+            >Blog about non-standard fonts</a
+          >
+        </p>
+      </div>
+      <div class="iframe">
+        <iframe
+          width="500"
+          height="315"
+          src="https://www.youtube.com/embed/gXIDTzusIEI"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="video">
+        <video width="500px" height="300px" controls>
+          <source src="./videos/20190212_182407.mp4" type="video/mp4" />
+          <source src="./videos/body model.3gp" type="video/3gp" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="form">
+        <table>
+          <tr>
+            <td>e-mail</td>
+            <td><input type="text" name="" /></td>
+          </tr>
+          <tr>
+            <td>name</td>
+            <td><input type="text" /></td>
+          </tr>
+          <tr>
+            <td>location</td>
+            <td><input type="text" /></td>
+          </tr>
+          <tr>
+            <td>message</td>
+            <td>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="submit" /></td>
+            <td><button>RESET</button></td>
+          </tr>
+        </table>
+      </div>
     </div>
 
-    <footer>Date: Topic: Developer: Contact</footer>
+    <footer>
+      Date: <span>Feb. 13, 2019</span> Topic:
+      <span>portfolio-page</span> Developer: <span>Jung Cho</span> Contact:
+      jungil_cho@yahoo.com
+    </footer>
   </body>
 </html>
