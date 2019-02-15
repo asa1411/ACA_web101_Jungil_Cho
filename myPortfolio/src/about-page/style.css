@@ -1,0 +1,22 @@
+@media (min-width: 992px) {
+  header {
+    height: 10%;
+  }
+  pre {
+    height: 20%;
+  }
+  blockquote {
+    height: 20%;
+  }
+  dl {
+    height: 20%;
+  }
+  form {
+    height: 20%;
+  }
+  footer {
+    height: 10%;
+  }
+}
+@media (min-width: 576px) {
+}
