@@ -71,6 +71,10 @@ nav {
   border-radius: 50%;
   margin: 15% auto;
   grid-column: 2/3;
+
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
 }
 
 h1 {
