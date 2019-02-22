@@ -1,0 +1,103 @@
+/* .container {
+  background-color: #cdd6c2;
+  width: 10%;
+  margin: 0 auto;
+}
+
+.container > div {
+  height: 50px;
+  width: 50px;
+  margin-bottom: 10px;
+  transition: width 2s;
+} */
+
+.square1 {
+  border: 3px solid #306dd1;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  transition: 2s;
+}
+.square2 {
+  border: 3px solid yellow;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  transition: 2s;
+}
+.square3 {
+  border: 3px solid rebeccapurple;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  transition: 2s;
+}
+.square4 {
+  border: 3px solid red;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  transition: 2s;
+}
+.square5 {
+  border: 3px solid royalblue;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  transition: 2s;
+}
+.square6 {
+  border: 3px solid brown;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  transition: 2s;
+}
+.square7 {
+  border: 3px solid violet;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  transition: 2s;
+}
+.square8 {
+  border: 3px solid yellowgreen;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  transition: 2s;
+}
+.square9 {
+  border: 3px solid olive;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  transition: 2s;
+}
+.square10 {
+  border: 3px solid orange;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  transition: 2s;
+}
+.square11 {
+  border: 3px solid orchid;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  transition: 2s;
+}
+.square12 {
+  border: 3px solid gray;
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  transition: 2s;
+}
+div:hover div:nth-child(odd) {
+  width: 100px;
+  height: 100px;
+  transition: all 2s;
+  margin-bottom: 50px;
+}
