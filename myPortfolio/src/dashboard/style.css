@@ -28,7 +28,7 @@ header {
 .clock {
   grid-area: clock;
 }
-.toDoList {
+.list-section {
   grid-area: todolist;
 }
 .grid-container {
@@ -241,53 +241,77 @@ header {
 .am-pm {
   grid-area: am-pm;
 }
-.toDoList {
-  display: grid;
-
-  grid-template-columns: 95%;
-  grid-gap: 10px;
-
-  grid-template-rows: 20% 20% 20% 20%;
-  grid-template-areas:
-    "todolist"
-    "plan"
-    "workout"
-    "meeting";
+.list-section {
+  background-color: #85cff7;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
-.box-title {
-  grid-area: todolist;
 
-  background-color: beige;
+#list-section {
+  text-align: center;
+  margin: 0px auto;
+}
 
-  justify-content: center;
-  display: flex;
-  align-items: center;
+h3 {
+  color: white;
+  margin: 0px auto;
+  padding: 20px;
 }
-.box-plan {
-  grid-area: plan;
-  background-color: darkorange;
-  display: flex;
-  align-items: center;
+
+ul {
+  padding: 0;
 }
-.box-workout {
-  grid-area: workout;
-  background-color: burlywood;
-  display: flex;
-  align-items: center;
+
+li {
+  background-color: #fff;
+  color: #000;
+  font-size: 20px;
+  list-style-type: none;
+  width: 20%;
+  margin: 0px auto;
+  border-radius: 3px;
+  border: 1px solid #000;
+  padding: 10px;
+  margin-bottom: 10px;
 }
-.box-meeting {
-  grid-area: meeting;
-  background-color: rgb(86, 197, 35);
-  display: flex;
-  align-items: center;
+
+/* .item {
+  background-color: #fff;
+  color: #000;
+} */
+
+input[type="text"] {
+  font-size: 12px;
+  padding: 6px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  margin: 0px auto;
+}
+
+input[type="submit"] {
+  background-color: #fff;
+  color: #000;
+  border-radius: 8px;
+  border: none;
+  padding: 5px;
+  margin: 0px auto;
+}
+
+/* #newItemButton {
+  display: none;
+} */
+
+#itemField {
+  margin-top: 60px;
+  width: 10%;
+  margin: 0px auto;
 }
 
 footer {
   width: 999px;
-  height: 40px;
-  background-color: black;
+  height: 50px;
+  background-color: rgb(71, 13, 13);
   color: white;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
   text-align: center;
   margin-left: auto;
   margin-right: auto;
