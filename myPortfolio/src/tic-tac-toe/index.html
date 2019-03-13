@@ -1,25 +1,24 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>tic-tac-toe</title>
+    <title>Tic tac toe board</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="box" id="topleft" onclick="place('topleft')"></div>
-      <div class="box" id="topcenter" onclick="place('topcenter')"></div>
-      <div class="box" id="topright" onclick="place('topright')"></div>
-      <div class="box" id="middleleft" onclick="place('middleleft')"></div>
-      <div class="box" id="middlecenter" onclick="place('middlecenter')"></div>
-      <div class="box" id="middleright" onclick="place('middleright')"></div>
-      <div class="box" id="bottomleft" onclick="place('bottomleft')"></div>
-      <div class="box" id="bottomcenter" onclick="place('bottomcenter')"></div>
-      <div class="box" id="bottomright" onclick="place('bottomright')"></div>
+    <div class="container" id="container">
+      <div class="box" id="box1" onclick="play(1)">-</div>
+      <div class="box" id="box2" onclick="play(2)">-</div>
+      <div class="box" id="box3" onclick="play(3)">-</div>
+      <div class="box" id="box4" onclick="play(4)">-</div>
+      <div class="box" id="box5" onclick="play(5)">-</div>
+      <div class="box" id="box6" onclick="play(6)">-</div>
+      <div class="box" id="box7" onclick="play(7)">-</div>
+      <div class="box" id="box8" onclick="play(8)">-</div>
+      <div class="box" id="box9" onclick="play(9)">-</div>
     </div>
-    <button type="button" onclick="changeMarkerToO()">O</button>
-    <button type="button" onclick="changeMarkerToX()">X</button>
+    <script src="../scripts/ticTacToe.js"></script>
   </body>
-  <script src="../scripts/ticTacToe.js"></script>
 </html>
