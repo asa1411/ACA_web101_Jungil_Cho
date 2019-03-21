@@ -51,25 +51,27 @@
       <div class="day32">27</div>
       <div class="day33">28</div>
     </div>
+
     <div class="calculator">
-      <div class="number1">1</div>
-      <div class="number2">2</div>
-      <div class="number3">3</div>
-      <div class="number4">4</div>
-      <div class="number5">5</div>
-      <div class="number6">6</div>
-      <div class="number7">7</div>
-      <div class="number8">8</div>
-      <div class="number9">9</div>
-      <div class="number0">0</div>
-      <div class="decimal">.</div>
-      <div class="plus">+</div>
-      <div class="minus">-</div>
-      <div class="equals">=</div>
-      <div class="division">/</div>
-      <div class="product">*</div>
-      <div class="answer">2/4 = 0.5</div>
-      <div class="clear">C</div>
+      <div onclick="calcFunc(1)" class="number1">1</div>
+      <div onclick="calcFunc(2)" class="number2">2</div>
+      <div onclick="calcFunc(3)" class="number3">3</div>
+      <div onclick="calcFunc(4)" class="number4">4</div>
+      <div onclick="calcFunc(5)" class="number5">5</div>
+      <div onclick="calcFunc(6)" class="number6">6</div>
+      <div onclick="calcFunc(7)" class="number7">7</div>
+      <div onclick="calcFunc(8)" class="number8">8</div>
+      <div onclick="calcFunc(9)" class="number9">9</div>
+      <div onclick="calcFunc(0)" class="number0">0</div>
+      <div class="decimal" onclick="decimal()">.</div>
+      <div onclick="arith('+')" class="plus">+</div>
+      <div onclick="arith('-')" class="minus">-</div>
+      <div onclick="equals()" class="equals">=</div>
+      <div onclick="arith('/')" class="division">/</div>
+      <div onclick="arith('*')" class="product">*</div>
+      <input type="text" class="answer" id="results" />
+
+      <div onclick="clear()" class="clear">C</div>
     </div>
     <div class="clock">
       <div class="hour">05</div>
@@ -82,12 +84,7 @@
       <div>What's up?</div>
       <div>This is the day!</div>
     </div>
-    <div class="container">
-      <button id="getLocation" class="button">Click For Location</button>
-      <div id="locating" class="loc"></div>
-      <div id="coordinates" class="coordinates"></div>
-      <a id="map" class="map"></a>
-    </div>
+    <div class="container"></div>
     <div class="toDoList">
       <div class="box-title">To Do List</div>
       <div class="box-plan"><a href="">@</a> plan</div>
@@ -95,6 +92,12 @@
       <div class="box-meeting"><a href="">@</a> meeting</div>
     </div>
     <script src="../script.jc/geolocation.js"></script>
+    <script src="./calculator.js"></script>
   </div>
-  <footer><a href="" class="email">email: </a> Thank you</footer>
+  <footer>
+    <button id="getLocation" class="button">Click For Location</button>
+    <div id="locating" class="loc"></div>
+    <div id="coordinates" class="coordinates"></div>
+    <a id="map" class="map"></a>
+  </footer>
 </html>
