@@ -1,5 +1,5 @@
 html {
-  background-image: url("patrick-tomasso-208114-unsplash.jpg");
+  background-image: url("../dashboard/images/nostalgia.png");
   background-repeat: no-repeat;
 }
 
@@ -326,6 +326,110 @@ footer {
 .map {
   margin: 20px;
 }
+.boxcontainer {
+  max-width: 999px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 20% 40% 40%;
+  grid-template-areas:
+    "score score"
+    "popcorn baker1"
+    "popcorn baker2";
+
+  margin-left: auto;
+  margin-right: auto;
+  align-content: center;
+  /* align-content is placing content, no content, but elements in the vertical center of the document. */
+  height: 800px;
+  text-align: center;
+}
+
+.box1 {
+  grid-area: score;
+  background-color: blueviolet;
+  /* height: 200px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: white;
+}
+
+.box2 {
+  grid-area: popcorn;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(Popcorn-Machine-4-wheel-600x753.jpg);
+}
+
+.box3 {
+  grid-area: baker1;
+  background-color: #2e3035;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* color: white; */
+}
+.box4 {
+  grid-area: baker2;
+  background-color: darkgoldenrod;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box2 button {
+  cursor: pointer;
+  border: none;
+  color: white;
+  padding: 15px 35px;
+  text-align: center;
+  font-size: 20px;
+}
+#button1:hover {
+  background-color: #2ccc59;
+}
+
+.box3,
+.box4 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 175px 30px;
+  grid-template-areas:
+    "image buttonInteractive"
+    "box3inner buttonInteractive";
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.imageSmallBaker {
+  grid-area: image;
+  background-color: black;
+}
+
+.imageMediumBaker {
+  grid-area: image;
+  background-color: white;
+}
+.box3Interactive,
+.box4Interactive {
+  list-style-type: none;
+  grid-area: buttonInteractive;
+  /* background-color: #40ef8c; */
+  display: grid;
+  grid-row-gap: 30px;
+}
+.box3Inner,
+.box4Inner {
+  grid-area: box3inner;
+  background-color: #cec627;
+  /* grid-row-gap: 30px; */
+}
+.baker1 {
+  color: black;
+}
+
 /* Media for Tablet size */
 @media (min-width: 481px) and (max-width: 767px) {
   html {
@@ -422,6 +526,68 @@ footer {
   }
   .box-meeting {
     margin-right: 0px;
+  }
+
+  .boxcontainer {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas:
+      "score score score"
+      " baker1 popcorn baker2";
+    /* align-content is placing content, no content, but elements in the vertical center of the document. */
+    height: 400px;
+  }
+
+  .box3 {
+    grid-area: baker1;
+    background-image: url(popcorn1.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    /* color: black; */
+  }
+  .box4 {
+    grid-area: baker2;
+    background-image: url(popcorn2.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .imageSmallBaker,
+  .imageMediumBaker {
+    display: none;
+  }
+
+  .box3,
+  .box4 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+      "buttonInteractive"
+      "boxinner";
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box3Interactive,
+  .box4Interactive {
+    list-style-type: none;
+    grid-area: buttonInteractive;
+    /* background-color: #40ef8c; */
+    display: grid;
+    grid-row-gap: 20px;
+  }
+  .box3Inner,
+  .box4Inner {
+    grid-area: boxinner;
+    background-color: #cec627;
+    /* grid-row-gap: 30px; */
   }
 }
 

@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Dashboard</title>
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
   </head>
   <header><h2>My Dashboard</h2></header>
   <div class="grid-container">
@@ -84,7 +88,12 @@
       <div>What's up?</div>
       <div>This is the day!</div>
     </div>
-    <div class="container"></div>
+    <div class="container">
+      <button id="getLocation" class="button">Click For Location</button>
+      <div id="locating" class="loc"></div>
+      <div id="coordinates" class="coordinates"></div>
+      <a id="map" class="map"></a>
+    </div>
     <div class="toDoList">
       <div class="box-title">To Do List</div>
       <div class="box-plan"><a href="">@</a> plan</div>
@@ -94,10 +103,80 @@
     <script src="../script.jc/geolocation.js"></script>
     <script src="./calculator.js"></script>
   </div>
-  <footer>
-    <button id="getLocation" class="button">Click For Location</button>
-    <div id="locating" class="loc"></div>
-    <div id="coordinates" class="coordinates"></div>
-    <a id="map" class="map"></a>
-  </footer>
+  <footer></footer>
+  <div class="boxcontainer">
+    <div class="box1" id="score">
+      0
+    </div>
+    <div class="box2">
+      <button type="button" class="btn btn-primary" onclick="btnClicked(1)">
+        Click me!
+      </button>
+    </div>
+    <div class="box3" id="smallBaker">
+      <div class="imageSmallBaker">
+        <img src="popcorn1.jpg" width="100px" height="120px" alt="a corn" />
+      </div>
+      <div class="box3Inner" id="smallBakerNumber">
+        Small Popcorn Maker: 0
+      </div>
+
+      <ul class="box3Interactive">
+        <li>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            onclick="buySmallBaker()"
+          >
+            Buy
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            onclick="sellSmallBaker()"
+          >
+            Sell
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="box4" id="mediumBaker">
+      <div class="imageMediumBaker">
+        <img
+          src="popcorn2.jpg"
+          width="100px"
+          height="120px"
+          alt="a box of popcorn"
+        />
+      </div>
+      <div class="box4Inner" id="mediumBakerNumber">
+        Medium Popcorn Maker: 0
+      </div>
+      <ul class="box4Interactive">
+        <li>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            onclick="buyMediumBaker()"
+          >
+            buy
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            onclick="sellMediumBaker()"
+          >
+            sell
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </html>
