@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Dashboard</title>
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
   </head>
   <header><h2>My Dashboard</h2></header>
   <div class="grid-container">
@@ -51,25 +55,27 @@
       <div class="day32">27</div>
       <div class="day33">28</div>
     </div>
+
     <div class="calculator">
-      <div class="number1">1</div>
-      <div class="number2">2</div>
-      <div class="number3">3</div>
-      <div class="number4">4</div>
-      <div class="number5">5</div>
-      <div class="number6">6</div>
-      <div class="number7">7</div>
-      <div class="number8">8</div>
-      <div class="number9">9</div>
-      <div class="number0">0</div>
-      <div class="decimal">.</div>
-      <div class="plus">+</div>
-      <div class="minus">-</div>
-      <div class="equals">=</div>
-      <div class="division">/</div>
-      <div class="product">*</div>
-      <div class="answer">2/4 = 0.5</div>
-      <div class="clear">C</div>
+      <div onclick="calcFunc(1)" class="number1">1</div>
+      <div onclick="calcFunc(2)" class="number2">2</div>
+      <div onclick="calcFunc(3)" class="number3">3</div>
+      <div onclick="calcFunc(4)" class="number4">4</div>
+      <div onclick="calcFunc(5)" class="number5">5</div>
+      <div onclick="calcFunc(6)" class="number6">6</div>
+      <div onclick="calcFunc(7)" class="number7">7</div>
+      <div onclick="calcFunc(8)" class="number8">8</div>
+      <div onclick="calcFunc(9)" class="number9">9</div>
+      <div onclick="calcFunc(0)" class="number0">0</div>
+      <div class="decimal" onclick="decimal()">.</div>
+      <div onclick="arith('+')" class="plus">+</div>
+      <div onclick="arith('-')" class="minus">-</div>
+      <div onclick="equals()" class="equals">=</div>
+      <div onclick="arith('/')" class="division">/</div>
+      <div onclick="arith('*')" class="product">*</div>
+      <input type="text" class="answer" id="results" />
+
+      <div onclick="clear()" class="clear">C</div>
     </div>
     <div class="clock">
       <div class="hour">05</div>
@@ -95,6 +101,82 @@
       <div class="box-meeting"><a href="">@</a> meeting</div>
     </div>
     <script src="../script.jc/geolocation.js"></script>
+    <script src="./calculator.js"></script>
   </div>
-  <footer><a href="" class="email">email: </a> Thank you</footer>
+  <footer></footer>
+  <div class="boxcontainer">
+    <div class="box1" id="score">
+      0
+    </div>
+    <div class="box2">
+      <button type="button" class="btn btn-primary" onclick="btnClicked(1)">
+        Click me!
+      </button>
+    </div>
+    <div class="box3" id="smallBaker">
+      <div class="imageSmallBaker">
+        <img src="popcorn1.jpg" width="100px" height="120px" alt="a corn" />
+      </div>
+      <div class="box3Inner" id="smallBakerNumber">
+        Small Popcorn Maker: 0
+      </div>
+
+      <ul class="box3Interactive">
+        <li>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            onclick="buySmallBaker()"
+          >
+            Buy
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            onclick="sellSmallBaker()"
+          >
+            Sell
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="box4" id="mediumBaker">
+      <div class="imageMediumBaker">
+        <img
+          src="popcorn2.jpg"
+          width="100px"
+          height="120px"
+          alt="a box of popcorn"
+        />
+      </div>
+      <div class="box4Inner" id="mediumBakerNumber">
+        Medium Popcorn Maker: 0
+      </div>
+      <ul class="box4Interactive">
+        <li>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            onclick="buyMediumBaker()"
+          >
+            buy
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            onclick="sellMediumBaker()"
+          >
+            sell
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </html>
