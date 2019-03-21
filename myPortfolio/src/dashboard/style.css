@@ -1,7 +1,3 @@
-html {
-  /* background-repeat: no-repeat; */
-}
-
 header {
   width: 999px;
   height: 50px;
@@ -30,14 +26,18 @@ header {
 .toDoList {
   grid-area: todolist;
 }
+.boxcontainer {
+  grid-area: checkpoint3;
+}
 .grid-container {
   display: grid;
   grid-template-columns: 333px 333px 333px;
-  grid-template-rows: auto 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
   grid-template-areas:
     "calendar calendar   calculator"
     "greetings greetings container"
-    "todolist todolist clock";
+    "todolist todolist clock"
+    "checkpoint3 checkpoint3 checkpoint3";
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
@@ -220,15 +220,30 @@ header {
   padding: 30px;
   text-align: center;
 }
+
+.container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  /* border-left: 1px solid black; */
+  font-family: Courier;
+  font-size: 16px;
+  /* color: darkred; */
+  grid-area: container;
+  background-color: blue;
+  /* width: 333px; */
+}
 .clock {
   display: grid;
   grid-template-areas: "hour hour hour colon minute minute minute am-pm";
 
-  margin-top: 100px;
+  /* margin-top: 100px; */
   font-size: 70px;
   padding: 10px;
+  align-items: center;
   text-align: center;
   color: wheat;
+  background-color: black;
 }
 .hour {
   grid-area: hour;
@@ -245,10 +260,10 @@ header {
 .toDoList {
   display: grid;
 
-  grid-template-columns: 95%;
-  grid-gap: 10px;
+  grid-template-columns: 100%;
+  /* grid-gap: 10px; */
 
-  grid-template-rows: 20% 20% 20% 20%;
+  grid-template-rows: 25% 25% 25% 25%;
   grid-template-areas:
     "todolist"
     "plan"
@@ -297,14 +312,7 @@ footer {
   justify-content: center;
   font-size: 20px;
 }
-.container {
-  border-left: 1px solid black;
-  font-family: Courier;
-  font-size: 16px;
-  color: darkred;
-  grid-area: container;
-  background-color: rgb(187, 119, 119);
-}
+
 .button {
   color: darkred;
   cursor: pointer;
@@ -360,6 +368,7 @@ footer {
   justify-content: center;
   align-items: center;
   background-image: url("../images/nostalgia.png");
+  background-size: cover;
 }
 
 .box3 {
@@ -438,11 +447,12 @@ footer {
     background-color: rgb(177, 119, 119);
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas:
       "calendar calendar"
       "greetings clock"
-      "calculator todolist";
+      "calculator todolist"
+      "checkpoint3";
   }
   header {
     width: auto;
@@ -550,7 +560,7 @@ footer {
   }
   .box4 {
     grid-area: baker2;
-    background-image: url(../dashboard/images/popcorn2.jpg);
+    background-image: url(../images/popcorn2.jpg);
     background-size: cover;
     display: flex;
     flex-direction: column-reverse;
@@ -599,13 +609,14 @@ footer {
     background-color: rgb(177, 119, 119);
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
     grid-template-areas:
       "calendar"
       "calculator"
       "greetings"
       "todolist"
-      "clock";
+      "clock"
+      "checkpoint3";
   }
   .calendar {
     font-size: 15px;
@@ -631,5 +642,17 @@ footer {
   .calculator {
     border-bottom: 2px solid wheat;
     border-top: 2px solid wheat;
+  }
+  .boxcontainer {
+    grid-area: checkpoint3;
+    display: grid;
+    grid-template-areas:
+      "score score"
+      "baker1 baker2";
+    justify-content: center;
+    /* margin: 20px 0px;
+    font-size: 70px; */
+    text-align: center;
+    /* color: wheat; */
   }
 }
