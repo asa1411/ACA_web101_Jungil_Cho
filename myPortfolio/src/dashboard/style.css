@@ -1,6 +1,5 @@
 html {
-  background-image: url("../dashboard/images/nostalgia.png");
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
 }
 
 header {
@@ -360,7 +359,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(Popcorn-Machine-4-wheel-600x753.jpg);
+  background-image: url("../images/nostalgia.png");
 }
 
 .box3 {
@@ -541,7 +540,7 @@ footer {
 
   .box3 {
     grid-area: baker1;
-    background-image: url(popcorn1.jpg);
+    background-image: url(../images/popcorn1.jpg);
     background-size: cover;
     display: flex;
     flex-direction: column-reverse;
@@ -551,7 +550,7 @@ footer {
   }
   .box4 {
     grid-area: baker2;
-    background-image: url(popcorn2.jpg);
+    background-image: url(../dashboard/images/popcorn2.jpg);
     background-size: cover;
     display: flex;
     flex-direction: column-reverse;
