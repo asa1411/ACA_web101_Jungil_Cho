@@ -1,8 +1,3 @@
-html {
-  background-image: url("../dashboard/images/nostalgia.png");
-  background-repeat: no-repeat;
-}
-
 header {
   width: 999px;
   height: 50px;
@@ -31,14 +26,22 @@ header {
 .toDoList {
   grid-area: todolist;
 }
+.boxcontainer {
+  grid-area: checkpoint3;
+}
+.geolocationcontainer {
+  grid-area: container;
+  background-color: blue;
+}
 .grid-container {
   display: grid;
   grid-template-columns: 333px 333px 333px;
-  grid-template-rows: auto 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
   grid-template-areas:
     "calendar calendar   calculator"
     "greetings greetings container"
-    "todolist todolist clock";
+    "todolist todolist clock"
+    "checkpoint3 checkpoint3 checkpoint3";
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
@@ -225,11 +228,13 @@ header {
   display: grid;
   grid-template-areas: "hour hour hour colon minute minute minute am-pm";
 
-  margin-top: 100px;
+  /* margin-top: 100px; */
   font-size: 70px;
   padding: 10px;
+  align-items: center;
   text-align: center;
   color: wheat;
+  background-color: black;
 }
 .hour {
   grid-area: hour;
@@ -246,10 +251,10 @@ header {
 .toDoList {
   display: grid;
 
-  grid-template-columns: 95%;
-  grid-gap: 10px;
+  grid-template-columns: 100%;
+  /* grid-gap: 10px; */
 
-  grid-template-rows: 20% 20% 20% 20%;
+  grid-template-rows: 25% 25% 25% 25%;
   grid-template-areas:
     "todolist"
     "plan"
@@ -298,14 +303,7 @@ footer {
   justify-content: center;
   font-size: 20px;
 }
-.container {
-  border-left: 1px solid black;
-  font-family: Courier;
-  font-size: 16px;
-  color: darkred;
-  grid-area: container;
-  background-color: rgb(187, 119, 119);
-}
+
 .button {
   color: darkred;
   cursor: pointer;
@@ -329,7 +327,7 @@ footer {
 .boxcontainer {
   max-width: 999px;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 750px 249px;
   grid-template-rows: 20% 40% 40%;
   grid-template-areas:
     "score score"
@@ -360,7 +358,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(Popcorn-Machine-4-wheel-600x753.jpg);
+  background-image: url("../dashboard/images/nostalgia.png");
+  background-size: cover;
 }
 
 .box3 {
@@ -424,142 +423,85 @@ footer {
 .box4Inner {
   grid-area: box3inner;
   background-color: #cec627;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* grid-row-gap: 30px; */
 }
 .baker1 {
   color: black;
 }
 
-/* Media for Tablet size */
-@media (min-width: 481px) and (max-width: 767px) {
-  html {
-    background: none;
+@media all and (min-width: 761px) and (max-width: 998px) {
+  header {
+    width: 761px;
   }
   .grid-container {
-    background-color: rgb(177, 119, 119);
+    width: 761px;
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 254px 254px 253px;
+  }
+  footer {
+    width: 761px;
+  }
+  .boxcontainer {
+    width: 761px;
+    display: grid;
+    grid-template-columns: 570px 191px;
+  }
+  .clock {
+    font-size: 50px;
+  }
+}
+@media all and (min-width: 401px) and (max-width: 760px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 401px;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas:
-      "calendar calendar"
-      "greetings clock"
-      "calculator todolist";
+      "calendar "
+      "calculator"
+      "clock"
+      "checkpoint3";
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    max-width: 401px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
   }
   header {
-    width: auto;
-  }
-  .calendar {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto;
-    grid-template-rows: auto auto auto auto auto auto;
-    grid-template-areas:
-      "month-year month-year month-year month-year month-year month-year month-year"
-      "sun mon tues wed thurs fri sat"
-      "day1 day2 day3 day4 day5 day6 day7"
-      "day8 day9 day10 day11 day12 day13 day14";
-    text-align: center;
-    padding: 10px;
-    border-bottom: 2px solid wheat;
-    font-size: 20px;
-    width: auto;
-  }
-  .tues {
-    grid-area: tues;
-    padding: 10px;
-  }
-  .wed {
-    grid-area: wed;
-    padding: 10px;
-  }
-
-  .thurs {
-    grid-area: thurs;
-    padding: 10px;
-  }
-  .month-year {
-    grid-area: month-year;
-    padding: 10px;
-  }
-  .sun {
-    grid-area: sun;
-    padding: 10px;
-  }
-  .mon {
-    grid-area: mon;
-    padding: 10px;
-  }
-  .fri {
-    grid-area: fri;
-    padding: 10px;
-  }
-  .sat {
-    grid-area: sat;
-    padding: 10px;
+    width: 401px;
   }
 
   footer {
-    width: auto;
+    width: 401px;
+  }
+  .boxcontainer {
+    width: 401px;
+    display: grid;
+    grid-template-columns: 201px 200px;
+    grid-template-rows: 10% 70% 20%;
+    grid-template-areas:
+      "score score"
+      "popcorn popcorn"
+      "baker1 baker2";
+    height: 500px;
   }
   .clock {
-    display: grid;
-    grid-template-areas: "hour colon minute am-pm";
-    font-size: 70px;
-    color: wheat;
-  }
-
-  .calculator {
-    border-bottom: 2px solid wheat;
-    border-top: 2px solid wheat;
+    font-size: 40px;
+    padding: 2px;
+    border-bottom: 1px solid white;
   }
   .toDoList {
-    border-bottom: 2px solid wheat;
-    border-top: 2px solid wheat;
+    display: none;
   }
-  .box-title {
-    margin-right: 0px;
+  .geolocationcontainer {
+    display: none;
   }
-  .box-plan {
-    margin-right: 0px;
-  }
-  .box-workout {
-    margin-right: 0px;
-  }
-  .box-meeting {
-    margin-right: 0px;
-  }
-
-  .boxcontainer {
-    display: grid;
-    grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 20% 80%;
-    grid-template-areas:
-      "score score score"
-      " baker1 popcorn baker2";
-    /* align-content is placing content, no content, but elements in the vertical center of the document. */
-    height: 400px;
-  }
-
-  .box3 {
-    grid-area: baker1;
-    background-image: url(popcorn1.jpg);
-    background-size: cover;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    /* color: black; */
-  }
-  .box4 {
-    grid-area: baker2;
-    background-image: url(popcorn2.jpg);
-    background-size: cover;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-  }
-  .imageSmallBaker,
-  .imageMediumBaker {
+  .greetings {
     display: none;
   }
 
@@ -567,70 +509,35 @@ footer {
   .box4 {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 100px 50px 100px;
     grid-template-areas:
-      "buttonInteractive"
-      "boxinner";
-    justify-content: center;
-    align-items: center;
+      "image "
+      "box3inner"
+      "buttonInteractive";
+    padding: 0px;
+  }
+  .imageSmallBaker {
+    grid-area: image;
+    background-color: none;
   }
 
+  .imageMediumBaker {
+    grid-area: image;
+    background-color: none;
+  }
   .box3Interactive,
   .box4Interactive {
-    list-style-type: none;
-    grid-area: buttonInteractive;
-    /* background-color: #40ef8c; */
-    display: grid;
-    grid-row-gap: 20px;
+    list-style-type: square;
+    background-color: none;
+    grid-row-gap: 2px;
   }
   .box3Inner,
   .box4Inner {
-    grid-area: boxinner;
-    background-color: #cec627;
-    /* grid-row-gap: 30px; */
-  }
-}
-
-/* Coding for Smartphone */
-@media (max-width: 480px) {
-  html {
-    background: none;
-  }
-  .grid-container {
-    background-color: rgb(177, 119, 119);
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas:
-      "calendar"
-      "calculator"
-      "greetings"
-      "todolist"
-      "clock";
-  }
-  .calendar {
-    font-size: 15px;
-    width: auto;
-  }
-  header {
-    width: auto;
-  }
-  footer {
-    width: auto;
-  }
-
-  .clock {
-    display: grid;
-    grid-template-areas: "hour colon minute am-pm";
+    grid-area: box3inner;
+    background-color: none;
+    display: flex;
     justify-content: center;
-    margin: 20px 0px;
-    font-size: 70px;
-    text-align: center;
-    color: wheat;
-  }
-
-  .calculator {
-    border-bottom: 2px solid wheat;
-    border-top: 2px solid wheat;
+    align-items: center;
+    grid-row-gap: 5px;
   }
 }
