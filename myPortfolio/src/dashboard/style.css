@@ -29,6 +29,10 @@ header {
 .boxcontainer {
   grid-area: checkpoint3;
 }
+.geolocationcontainer {
+  grid-area: container;
+  background-color: blue;
+}
 .grid-container {
   display: grid;
   grid-template-columns: 333px 333px 333px;
@@ -220,19 +224,6 @@ header {
   padding: 30px;
   text-align: center;
 }
-
-.container {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  /* border-left: 1px solid black; */
-  font-family: Courier;
-  font-size: 16px;
-  /* color: darkred; */
-  grid-area: container;
-  background-color: blue;
-  /* width: 333px; */
-}
 .clock {
   display: grid;
   grid-template-areas: "hour hour hour colon minute minute minute am-pm";
@@ -298,7 +289,7 @@ header {
   align-items: center;
 }
 
-footer {
+/* footer {
   width: 999px;
   height: 40px;
   background-color: black;
@@ -311,7 +302,7 @@ footer {
   align-items: center;
   justify-content: center;
   font-size: 20px;
-}
+} */
 
 .button {
   color: darkred;
@@ -367,7 +358,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../images/nostalgia.png");
+  background-image: url("../dashboard/images/nostalgia.png");
   background-size: cover;
 }
 
@@ -432,144 +423,50 @@ footer {
 .box4Inner {
   grid-area: box3inner;
   background-color: #cec627;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* grid-row-gap: 30px; */
 }
 .baker1 {
   color: black;
 }
 
-/* Media for Tablet size */
-@media (min-width: 481px) and (max-width: 767px) {
-  html {
-    background: none;
-  }
-  .grid-container {
-    background-color: rgb(177, 119, 119);
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas:
-      "calendar calendar"
-      "greetings clock"
-      "calculator todolist"
-      "checkpoint3";
-  }
+@media all and (min-width: 480px) and (max-width: 998px) {
   header {
     width: auto;
   }
-  .calendar {
+  .grid-container {
+    width: auto;
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto;
-    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
     grid-template-areas:
-      "month-year month-year month-year month-year month-year month-year month-year"
-      "sun mon tues wed thurs fri sat"
-      "day1 day2 day3 day4 day5 day6 day7"
-      "day8 day9 day10 day11 day12 day13 day14";
-    text-align: center;
-    padding: 10px;
-    border-bottom: 2px solid wheat;
-    font-size: 20px;
-    width: auto;
-  }
-  .tues {
-    grid-area: tues;
-    padding: 10px;
-  }
-  .wed {
-    grid-area: wed;
-    padding: 10px;
-  }
-
-  .thurs {
-    grid-area: thurs;
-    padding: 10px;
-  }
-  .month-year {
-    grid-area: month-year;
-    padding: 10px;
-  }
-  .sun {
-    grid-area: sun;
-    padding: 10px;
-  }
-  .mon {
-    grid-area: mon;
-    padding: 10px;
-  }
-  .fri {
-    grid-area: fri;
-    padding: 10px;
-  }
-  .sat {
-    grid-area: sat;
-    padding: 10px;
-  }
-
-  footer {
-    width: auto;
-  }
-  .clock {
-    display: grid;
-    grid-template-areas: "hour colon minute am-pm";
-    font-size: 70px;
-    color: wheat;
-  }
-
-  .calculator {
-    border-bottom: 2px solid wheat;
-    border-top: 2px solid wheat;
-  }
-  .toDoList {
-    border-bottom: 2px solid wheat;
-    border-top: 2px solid wheat;
-  }
-  .box-title {
-    margin-right: 0px;
-  }
-  .box-plan {
-    margin-right: 0px;
-  }
-  .box-workout {
-    margin-right: 0px;
-  }
-  .box-meeting {
-    margin-right: 0px;
+      "calendar"
+      "calculator"
+      "todolist"
+      "greetings"
+      "checkpoint3";
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
   }
 
   .boxcontainer {
+    width: 480px;
     display: grid;
-    grid-template-columns: 25% 50% 25%;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 20% 80%;
     grid-template-areas:
       "score score score"
-      " baker1 popcorn baker2";
-    /* align-content is placing content, no content, but elements in the vertical center of the document. */
-    height: 400px;
-  }
+      "baker1 popcorn baker2";
 
-  .box3 {
-    grid-area: baker1;
-    background-image: url(../images/popcorn1.jpg);
-    background-size: cover;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    /* color: black; */
-  }
-  .box4 {
-    grid-area: baker2;
-    background-image: url(../images/popcorn2.jpg);
-    background-size: cover;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-  }
-  .imageSmallBaker,
-  .imageMediumBaker {
-    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    /* align-content is placing content, no content, but elements in the vertical center of the document. */
+    /* height: 800px; */
+    text-align: center;
   }
 
   .box3,
@@ -579,80 +476,21 @@ footer {
     grid-template-rows: 50% 50%;
     grid-template-areas:
       "buttonInteractive"
-      "boxinner";
+      "box3inner";
     justify-content: center;
     align-items: center;
-  }
-
-  .box3Interactive,
-  .box4Interactive {
-    list-style-type: none;
-    grid-area: buttonInteractive;
-    /* background-color: #40ef8c; */
-    display: grid;
-    grid-row-gap: 20px;
-  }
-  .box3Inner,
-  .box4Inner {
-    grid-area: boxinner;
-    background-color: #cec627;
-    /* grid-row-gap: 30px; */
-  }
-}
-
-/* Coding for Smartphone */
-@media (max-width: 480px) {
-  html {
-    background: none;
-  }
-  .grid-container {
-    background-color: rgb(177, 119, 119);
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto auto auto;
-    grid-template-areas:
-      "calendar"
-      "calculator"
-      "greetings"
-      "todolist"
-      "clock"
-      "checkpoint3";
-  }
-  .calendar {
-    font-size: 15px;
-    width: auto;
-  }
-  header {
-    width: auto;
-  }
-  footer {
-    width: auto;
-  }
-
-  .clock {
-    display: grid;
-    grid-template-areas: "hour colon minute am-pm";
-    justify-content: center;
-    margin: 20px 0px;
-    font-size: 70px;
+    padding: 10px;
     text-align: center;
-    color: wheat;
+  }
+  .imageSmallBaker {
+    grid-area: image;
+    background-color: black;
+    display: none;
   }
 
-  .calculator {
-    border-bottom: 2px solid wheat;
-    border-top: 2px solid wheat;
-  }
-  .boxcontainer {
-    grid-area: checkpoint3;
-    display: grid;
-    grid-template-areas:
-      "score score"
-      "baker1 baker2";
-    justify-content: center;
-    /* margin: 20px 0px;
-    font-size: 70px; */
-    text-align: center;
-    /* color: wheat; */
+  .imageMediumBaker {
+    grid-area: image;
+    background-color: white;
+    display: none;
   }
 }
