@@ -88,7 +88,7 @@
       <div>What's up?</div>
       <div>This is the day!</div>
     </div>
-    <div class="container">
+    <div class="geolocationcontainer">
       <button id="getLocation" class="button">Click For Location</button>
       <div id="locating" class="loc"></div>
       <div id="coordinates" class="coordinates"></div>
@@ -100,10 +100,8 @@
       <div class="box-workout"><a href="">@</a> workout</div>
       <div class="box-meeting"><a href="">@</a> meeting</div>
     </div>
-    <script src="../script.jc/geolocation.js"></script>
-    <script src="./calculator.js"></script>
   </div>
-  <footer></footer>
+  <!-- <footer></footer> -->
   <div class="boxcontainer">
     <div class="box1" id="score">
       0
@@ -115,7 +113,12 @@
     </div>
     <div class="box3" id="smallBaker">
       <div class="imageSmallBaker">
-        <img src="popcorn1.jpg" width="100px" height="120px" alt="a corn" />
+        <img
+          src="../dashboard/images/popcorn1.jpg"
+          width="100px"
+          height="120px"
+          alt="a corn"
+        />
       </div>
       <div class="box3Inner" id="smallBakerNumber">
         Small Popcorn Maker: 0
@@ -145,7 +148,7 @@
     <div class="box4" id="mediumBaker">
       <div class="imageMediumBaker">
         <img
-          src="popcorn2.jpg"
+          src="../dashboard/images/popcorn2.jpg"
           width="100px"
           height="120px"
           alt="a box of popcorn"
@@ -176,6 +179,8 @@
       </ul>
     </div>
   </div>
+  <script src="../script.jc/geolocation.js"></script>
+  <script src="./calculator.js"></script>
   <script src="script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
